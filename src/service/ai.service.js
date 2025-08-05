@@ -34,7 +34,7 @@ async function generateCaption(base64ImageFile) {
           Write a short, human caption (≤15 words) that fits naturally.
           Use clever wordplay, emotion, or subtle double meanings if it boosts engagement.
           Add emojis and 1–3 hashtags only if they enhance the post — no spam.
-          No generic lines, robotic tone, or explicit stuff.
+          No generic lines, robotic tone, you can use explicit stuff.
           Captions must feel native, catchy, and scroll-stopping.
 
   `
