@@ -16,6 +16,8 @@ Yeh ek social media application ka backend hai, jo Node.js, Express, aur MongoDB
 *   **bcryptjs**: For hashing passwords securely.
 *   **dotenv**: For managing environment variables.
 *   **cookie-parser**: For parsing cookies from requests.
+*   **Multer**: For handling `multipart/form-data`, used for file uploads.
+*   **ImageKit**: For cloud-based image storage and delivery.
 
 ---
 
@@ -73,20 +75,27 @@ E:\AI COHORT\BACKEND\PROJECT 2 (SOCIAL MEDIA PROJECT)
 │   README.md
 │   server.js         # <-- Application ka entry point (Yahin se start hota hai)
 │
-└───src
+└───src               # <-- Source code folder (Saara main code yahan hai)
     │   app.js          # <-- Express app configuration (Saare middleware yahin hain)
     │
     ├───controllers
     │       auth.controller.js  # <-- Business logic (Register/Login ka main code)
+    │       post.controller.js  # <-- Post creation logic (Post banane ka code)
     │
     ├───db
     │       db.js         # <-- Database connection logic (MongoDB se connect hota hai)
     │
+    ├───middlewares
+    │       auth.middleware.js   # <-- JWT verification middleware
+    │       multer.middleware.js # <-- Multer configuration for file uploads
+    │
     ├───models
+    │       post.model.js # <-- Mongoose schema for Posts
     │       user.model.js # <-- Mongoose schema/model (User ka data structure)
     │
     └───routes
             auth.routes.js      # <-- API routes (URL paths define karta hai)
+            post.routes.js      # <-- Post-related API routes
 ```
 
 ---
@@ -177,5 +186,3 @@ graph TD
 | `POST` | `/api/auth/login`    | Logs in an existing user and returns a JWT cookie.|
 
 ---
-
-
